@@ -15,6 +15,7 @@ import { AuthorizeMints } from '../AuthorizeMints'
 import { MintMultiplierLookup } from '../MintMultiplierLookup'
 import { MintMultipliers } from '../MintMultipliers'
 import { StakePoolImage } from '../StakePoolImage'
+import { AdminClaimRewardsForHolders } from './AdminClaimRewardsForHolders'
 import { ReclaimFunds } from './ReclaimFunds'
 import { RewardDistributorUpdate } from './RewardDistributorUpdate'
 import { StakePoolBalance } from './StakePoolBalance'
@@ -141,6 +142,7 @@ export const AdminStakePool = ({
               <div className="w-full">
                 <ReclaimFunds />
                 <TransferFunds />
+                <AdminClaimRewardsForHolders />
               </div>
             ),
           }[pane]
