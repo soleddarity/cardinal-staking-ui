@@ -1,3 +1,4 @@
+import { AdvancedConfigForm } from '@/components/admin/AdvancedConfigForm'
 import { pubKeyUrl, shortPubKey } from '@cardinal/common'
 import { LinkIcon } from '@heroicons/react/24/outline'
 import type { PublicKey } from '@solana/web3.js'
@@ -27,6 +28,7 @@ export type PANE_OPTIONS =
   | 'reward-distributor'
   | 'reward-multipliers'
   | 'reward-funds'
+  | 'advanced-config'
 
 export const AdminStakePool = ({
   onSuccess,
@@ -82,6 +84,11 @@ export const AdminStakePool = ({
       tooltip: !rewardDistributor.data
         ? 'Only applicable for stake pools that have reward distribution'
         : 'Manage reward distributor funds',
+    },
+    {
+      label: <div className="flex items-center gap-2">Config</div>,
+      value: 'advanced-config',
+      tooltip: 'Set advanced configuration settings',
     },
   ]
 
@@ -141,6 +148,11 @@ export const AdminStakePool = ({
               <div className="w-full">
                 <ReclaimFunds />
                 <TransferFunds />
+              </div>
+            ),
+            'advanced-config': (
+              <div className="w-full">
+                <AdvancedConfigForm />
               </div>
             ),
           }[pane]
