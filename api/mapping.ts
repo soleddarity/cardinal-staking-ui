@@ -3069,6 +3069,37 @@ export const stakePoolMetadatas: StakePoolMetadata[] = [
     receiptType: ReceiptType.Original,
     tokenStandard: TokenStandard.NonFungible,
     imageUrl: '/logos/supportive-dudes.png',
+    maxStaked: 3333,
+    colors: {
+      primary: '#000000',
+      secondary: '#878ce0',
+    },
+    links: [
+      {
+        text: 'Twitter',
+        value: 'https://twitter.com/SolEddaRity',
+      },
+      {
+        text: 'Discord',
+        value: 'https://discord.gg/soleddarity',
+      },
+    ],
+  },
+{
+    name: 'pixel-dudes',
+    displayName: 'Pixel Dudes',
+    description:
+      'Stake your dudes to earn rewards from various reward mechanisms including $EDD, merchandise, redeemable rewards by the Pixel Dudes pool!',
+    nameInHeader: true,
+    stakePoolAddress: new PublicKey(
+      'F2tzjza3o6qWoyL9ufTG5K5zpTiAm5GebqsFYbB1cKxx'
+    ),
+    contrastHomepageBkg: true,
+    hideFooter: true,
+    hideAllowedTokens: true,
+    receiptType: ReceiptType.Original,
+    tokenStandard: TokenStandard.NonFungible,
+    imageUrl: 'https://pbs.twimg.com/profile_images/1614237591036911616/IRgSQQ7b_400x400.jpg',
     maxStaked: 3300,
     colors: {
       primary: '#000000',
