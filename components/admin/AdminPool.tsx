@@ -1,4 +1,3 @@
-import { AdvancedConfigForm } from '@/components/admin/AdvancedConfigForm'
 import { pubKeyUrl, shortPubKey } from '@cardinal/common'
 import { LinkIcon } from '@heroicons/react/24/outline'
 import type { PublicKey } from '@solana/web3.js'
@@ -11,6 +10,8 @@ import { useStakePoolMetadata } from 'hooks/useStakePoolMetadata'
 import Image from 'next/image'
 import { useEnvironmentCtx } from 'providers/EnvironmentProvider'
 import { useState } from 'react'
+
+import { AdvancedConfigForm } from '@/components/admin/AdvancedConfigForm'
 
 import { AuthorizeMints } from '../AuthorizeMints'
 import { MintMultiplierLookup } from '../MintMultiplierLookup'
